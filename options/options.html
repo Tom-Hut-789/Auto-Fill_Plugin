@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>个人资料 - 招聘网申自动填充</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>个人资料</h1>
+    <p class="tip">资料仅保存在本机浏览器中，不会上传到任何服务器。填写后回到招聘网页，点击插件图标 →「一键填充」（或按快捷键 Alt+Shift+F / 右键菜单）。</p>
+
+    <section>
+      <h2>基本信息</h2>
+      <div class="grid">
+        <label>姓名 <input id="name" placeholder="如：张三"></label>
+        <label>性别
+          <select id="gender">
+            <option value="">请选择</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </select>
+        </label>
+        <label>出生日期 <input type="date" id="birthDate"></label>
+        <label>手机号 <input id="phone" placeholder="如：13800000000"></label>
+        <label>邮箱 <input id="email" placeholder="如：name@example.com"></label>
+        <label>身高(cm) <input id="height" placeholder="如：175"></label>
+        <label>体重(kg) <input id="weight" placeholder="如：65"></label>
+        <label>身份证号 <input id="idCard"></label>
+        <label>籍贯 <input id="nativePlace"></label>
+        <label>民族 <input id="ethnicity"></label>
+        <label>政治面貌 <input id="politicalStatus"></label>
+        <label>现居城市 <input id="currentCity"></label>
+        <label class="full">联系地址 <input id="homeAddress"></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>教育经历</h2>
+      <div id="schools" class="list"></div>
+      <button class="add" data-list="schools">＋ 添加教育经历</button>
+    </section>
+
+    <section>
+      <h2>获奖经历</h2>
+      <div id="awards" class="list"></div>
+      <button class="add" data-list="awards">＋ 添加获奖经历</button>
+    </section>
+
+    <section>
+      <h2>项目经历</h2>
+      <div id="projects" class="list"></div>
+      <button class="add" data-list="projects">＋ 添加项目经历</button>
+    </section>
+
+    <section>
+      <h2>学生工作经历</h2>
+      <div id="studentWorks" class="list"></div>
+      <button class="add" data-list="studentWorks">＋ 添加学生工作经历</button>
+    </section>
+
+    <section>
+      <h2>实习经历</h2>
+      <div id="internships" class="list"></div>
+      <button class="add" data-list="internships">＋ 添加实习经历</button>
+    </section>
+
+    <section>
+      <h2>语言能力</h2>
+      <div id="languages" class="list"></div>
+      <button class="add" data-list="languages">＋ 添加语言能力</button>
+    </section>
+
+    <section>
+      <h2>论文</h2>
+      <div id="papers" class="list"></div>
+      <button class="add" data-list="papers">＋ 添加论文</button>
+    </section>
+
+    <section>
+      <h2>专利</h2>
+      <div id="patents" class="list"></div>
+      <button class="add" data-list="patents">＋ 添加专利</button>
+    </section>
+
+    <section>
+      <h2>软著</h2>
+      <div id="softwares" class="list"></div>
+      <button class="add" data-list="softwares">＋ 添加软著</button>
+    </section>
+
+    <section>
+      <h2>其他</h2>
+      <div class="grid">
+        <label class="full">专业技能 <textarea id="skills" rows="3"></textarea></label>
+        <label class="full">自我评价 <textarea id="selfEvaluation" rows="4"></textarea></label>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="save" class="primary">保存资料</button>
+      <button id="reset" class="ghost">清空所有资料</button>
+      <span id="saveTip"></span>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

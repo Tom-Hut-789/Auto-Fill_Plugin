@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "招聘网申自动填充助手",
+  "version": "0.1.0",
+  "description": "在招聘网站一键自动填充个人简历信息（姓名、学历、奖项、项目经历等），数据仅保存在本机浏览器。",
+  "permissions": ["storage", "contextMenus"],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "action": {
+    "default_title": "招聘网申自动填充",
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "options/options.html",
+  "commands": {
+    "autofill": {
+      "suggested_key": { "default": "Alt+Shift+F" },
+      "description": "一键填充当前页面表单"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["shared/field-dictionary.js", "shared/matcher.js", "content/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
